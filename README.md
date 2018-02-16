@@ -1,5 +1,4 @@
-<snippet>
-  <content><![CDATA[
+<content><![CDATA[
 # Hangman Node App
 	In this Hangman Game we feature a classic game of HangMan inside the command line/terminal. Players will have to guess a random word from a category of NFL Team names.
 ## Installation
@@ -12,5 +11,3 @@ Users will have 10 guesses to spell the team name. If they fail to do so, the ga
 ## Author
 	Estiven Salazar
 ]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
