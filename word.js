@@ -1,27 +1,14 @@
-const Letter = require("./letter.js");
 
-
-function Word(value) {
-	//defining value
-	this.value = value;
-	//creating letters array
-	this.letters = [];
-	//has the word been guessed?
-	this.valueFound = false;
-
-	
-	// creating getLetters method
-	this.getLetters = function() {
-		//rendering letters through for loop of new word into "this.letters array"
-		for(let i=0; i < this.value.length; i++) {
-			let newLetter = new Letter(this.value[i]);
-			this.letters.push(newLetter);
-		}
-
-	}
-	console.log(this.letters);
+//creating Word constructor with a chosen word variable, and array of words to use
+function Word() {
+	this.word = "";
+	this.wordBankArr = ["giants", "patriots", "eagles", "jets", "seahawks", "cowboys", "redskins", "titans"];
 }
 
-let wordOne = new Word("hello");
+//method used to select a random word from the word bank array and pushing it to the chosen word variable
+Word.prototype.selectRandomWord = function() {
+	this.word = this.wordBankArr[Math.floor(Math.random() * this.wordBankArr.length)];
+};
 
-wordOne.getLetters();
+module.exports = Word;
+
