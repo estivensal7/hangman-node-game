@@ -14,7 +14,7 @@ Letter.prototype.displayBlankWord = function() {
 
 Letter.prototype.guessedLetters = function(lettersAlreadyUsed) {
 	this.letterArr.push(lettersAlreadyUsed);
-	console.log(`Letters Used: ${this.letterArr}`);
+	console.log(`Letters Used: ${this.letterArr} \n`);
 
 	//creating for loop that will run through which letters have been guessed
 	for (let i = 0; i < this.word.length; i++) {
@@ -23,7 +23,7 @@ Letter.prototype.guessedLetters = function(lettersAlreadyUsed) {
 			this.blankWord[i] = lettersAlreadyUsed;
 		};
 	};
-	console.log(this.blankWord);
+	console.log(`${this.blankWord} \n`);
 }
 
 //creating method to follow and show the progress of the word being guessed 
